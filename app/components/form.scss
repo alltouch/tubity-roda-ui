@@ -1,0 +1,66 @@
+.form{
+    max-width: 680px;
+    padding: 0 24px;
+    margin: 0 auto;
+
+    h1{
+        font-size: 30px;
+        font-weight: lighter;
+        margin: 0 0 20px;
+    }
+
+    .input-container{
+        display: flex;
+
+        input{
+            flex-grow: 1;
+            margin-right: 20px;
+            max-width: 550px;
+
+            height: 36px;
+            padding: 0 16px;
+            font-size: 14px;
+            line-height: 36px;
+            border: none;
+            border-radius: 2px;
+            outline: none;
+            transition: background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        button{
+            border: none;
+            border-radius: 2px;
+            color: #039be5;
+            font-weight: 500;
+            height: 36px;
+            min-width: 64px;
+            padding: 0 16px;
+            text-transform: uppercase;
+
+            background: white;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+                0 3px 1px -2px rgba(0,0,0,0.2),
+                0 1px 5px 0 rgba(0,0,0,0.12);
+
+            transition: all .2s ease;
+
+            outline: none;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            line-height: 36px;
+
+            &:active{
+                background: #bababa;
+                box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),
+                    0 1px 10px 0 rgba(0,0,0,0.12),
+                    0 2px 4px -1px rgba(0,0,0,0.2);
+            }
+        }
+    }
+
+    .error-message{
+        margin-top: 10px;
+        min-height: 20px;
+    }
+}

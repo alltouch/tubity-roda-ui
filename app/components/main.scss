@@ -1,7 +1,21 @@
+html{
+    font-size: 14px;
+}
+
 body{
     margin: 0;
 }
 
 .app{
-    background: green;
+    padding-top: 50px;
+}
+
+.blue-section{
+    background-color: #366ed1;
+    padding: 30px 0 45px;
+    color: white;
+}
+
+.message{
+    margin-top: 20px;
 }

@@ -1,0 +1,31 @@
+.result{
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    h2{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .result-text{
+        padding: 9px 12px;
+        font-size: 20px;
+        background-color: #eee;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 2px;
+        margin-right: 20px;
+    }
+
+    .result-link{
+        color: #039be5;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 1.25;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
