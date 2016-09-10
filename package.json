@@ -45,7 +45,7 @@
     "lint": "eslint . --ext .js --ext .jsx",
     "prod": "NODE_ENV=production webpack",
     "deploy": "NODE_ENV=production webpack",
-    "test": "mocha test/.setup.js test/**/*-test.js"
+    "test": "mocha test/.setup.js test/**/*-test.jsx"
   },
   "author": "alltouch",
   "license": "MIT"

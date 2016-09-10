@@ -3,13 +3,13 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import Form from '../../app/components/form';
 
-describe("Form component", function() {
+describe("Form component", function () {
 
-    it("has className", function() {
+    it("has className", function () {
         expect(shallow(<Form />).is('form.form')).to.equal(true);
     });
 
-    it("has inner elements", function() {
+    it("has inner elements", function () {
         const wrapper = shallow(<Form />);
         expect(wrapper.find('h1').length).to.equal(1);
         expect(wrapper.find('input').length).to.equal(1);
@@ -17,7 +17,7 @@ describe("Form component", function() {
         expect(wrapper.find('.error-message').length).to.equal(1);
     });
 
-    it("input change", function() {
+    it("input change", function () {
         const wrapper = shallow(<Form />);
         expect(wrapper.state('inputValue')).to.equal('');
         wrapper.find('input').simulate('change', {
@@ -26,19 +26,24 @@ describe("Form component", function() {
         expect(wrapper.state('inputValue')).to.equal('abc');
     });
 
-    it("error message shown", function() {
+    it("error message shown", function () {
         const wrapper = shallow(<Form />);
+        /* eslint-disable no-unused-expressions */
         expect(wrapper.find('.error-message').text()).to.not.be.ok;
+        /* eslint-enable no-unused-expressions */
         wrapper.find('input').simulate('change', {
             target: { value: 'abc' }
         });
         wrapper.find('form').simulate('submit', {
-            preventDefault(){}
+            preventDefault(){
+            }
         });
+        /* eslint-disable no-unused-expressions */
         expect(wrapper.find('.error-message').text()).to.be.ok;
+        /* eslint-enable no-unused-expressions */
     });
 
-    it("call submit", function() {
+    it("call submit", function () {
         let resultUrl = '';
         let onSubmit = (_resultUrl) => {
             resultUrl = _resultUrl;
@@ -50,7 +55,8 @@ describe("Form component", function() {
             target: { value: checkUrl }
         });
         wrapper.find('form').simulate('submit', {
-            preventDefault(){}
+            preventDefault(){
+            }
         });
         expect(resultUrl).to.equal(checkUrl);
     });
