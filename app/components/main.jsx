@@ -24,6 +24,10 @@ export default class Main extends Component{
             resultUrl: '',
             message: ''
         });
+        this.loadShortUrl(url);
+    }
+
+    loadShortUrl(url){
         axios
             .post('http://localhost:9990/s', { url })
             .then(
