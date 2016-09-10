@@ -19,7 +19,7 @@ export default class Form extends Component {
         let onChange = (event) => {
             this.setState({
                 inputValue: event.target.value
-            })
+            });
         };
         let onFormSubmit = (event) => {
             event.preventDefault();
@@ -42,7 +42,7 @@ export default class Form extends Component {
             <form className="form" onSubmit={onFormSubmit}>
                 <h1>Simplify your links</h1>
                 <div className="input-container">
-                    <input placeholder="Your original url here" value={inputValue} onChange={onChange}/>
+                    <input placeholder="Your original url here" value={inputValue} onChange={onChange} />
                     <button>Shorten url</button>
                 </div>
                 <div className="error-message">

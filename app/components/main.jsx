@@ -1,9 +1,10 @@
 import React from 'react';
+import axios from 'axios';
 import './main.scss';
 import Form from './form';
 import Result from './result';
 import Loading from './loading';
-import axios from 'axios';
+
 
 let { Component } = React;
 
@@ -38,8 +39,7 @@ export default class Main extends Component{
         });
     }
 
-    onError(error){
-        console.log(error);
+    onError(){
         this.setState({
             loading: false,
             message: 'Connection problems'
@@ -47,7 +47,7 @@ export default class Main extends Component{
     }
 
     render(){
-        let onSubmit = this.onSubmit.bind(this);
+        let onSubmit = (event) => this.onSubmit(event);
         let { loading, resultUrl, message } = this.state;
 
         return (
